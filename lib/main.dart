@@ -1,5 +1,6 @@
 import 'package:exptracker/applications/catagory_bloc/bloc/catagory_bloc.dart';
 import 'package:exptracker/applications/expence_income_bloc/bloc/expance_bloc.dart';
+import 'package:exptracker/applications/picker_bloc/bloc/picker_bloc.dart';
 import 'package:exptracker/applications/profile_info_bloc/bloc/profile_info_bloc.dart';
 import 'package:exptracker/domains/catagory_model/catagory_model.dart';
 import 'package:exptracker/domains/transaction_model/transcation_model.dart';
@@ -44,6 +45,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CatagoryBloc(),
+        ),
+         BlocProvider(
+          create: (context) => PickerBloc(),
         ),
       ],
      

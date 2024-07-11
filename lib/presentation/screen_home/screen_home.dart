@@ -1,4 +1,5 @@
 import 'package:exptracker/applications/expence_income_bloc/bloc/expance_bloc.dart';
+import 'package:exptracker/applications/picker_bloc/bloc/picker_bloc.dart';
 import 'package:exptracker/constants/constants.dart';
 import 'package:exptracker/presentation/screen_add_catagory/screen_add_expanse.dart';
 import 'package:exptracker/presentation/screen_catagories/screen_catagories.dart';
@@ -22,6 +23,9 @@ class ScreenHome extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        actions: [IconButton(onPressed: (){
+          BlocProvider.of<PickerBloc>(context).add(Picker());
+        }, icon: Icon(Icons.abc))],
       ),
       body: BlocBuilder<ExpanceBloc, ExpanceState>(
         builder: (context, state) {
